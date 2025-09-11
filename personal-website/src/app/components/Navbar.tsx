@@ -10,7 +10,7 @@ export default function Navbar() {
     { href: '/',                label: 'experience' },
     { href: '/about',           label: 'about'      },
     { href: 'mailto:rincon2@stolaf.edu', label: 'contact' },
-    { href: '/githubresume.pdf', label: 'resume'     },
+    { href: '/github_resume.pdf', label: 'resume'     },
   ]
 
   return (

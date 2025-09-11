@@ -65,3 +65,19 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
 }
+
+/* --- Global link styles --- */
+a {
+  color: black !important;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black !important;
+  text-decoration: underline;
+}

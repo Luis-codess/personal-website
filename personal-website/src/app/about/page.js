@@ -1,19 +1,14 @@
 'use client';
 
-import Snowfall from 'react-snowfall';
-import { Radio_Canada } from 'next/font/google';
 import React from 'react';
+import Snowfall from 'react-snowfall';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 
-const radio = Radio_Canada({
-  subsets: ['latin'],
-  weight: ['400'],
-});
-
-export default function Home() {
+export default function About() {
   return (
-    <div className={`${radio.className} relative min-h-screen overflow-x-hidden`}>
-      {/* Snowfall background */}
+    <div className="relative min-h-screen overflow-x-hidden">
+      {/* Snowfall behind content */}
       <Snowfall
         snowflakeCount={200}
         style={{
@@ -27,81 +22,60 @@ export default function Home() {
         }}
       />
 
-      {/* HEADER */}
-    <div className="max-w-screen-lg mx-auto px-12 pt-24 pb-16 flex justify-between items-center">
-        <span className="text-lg">Luis Rincon</span>
-        <Navbar />
-      </div>
+      <div className="max-w-2xl w-full mx-auto px-6 sm:px-12">
+        {/* Header / Navbar */}
+        <div className="pt-24 pb-16 flex justify-between items-center">
+          <span className="text-lg">Luis Rincon</span>
+          <Navbar />
+        </div>
 
-      {/* MAIN */}
-     <div className="max-w-screen-lg mx-auto px-12 space-y-40 pb-24">
-        {/* PROJECTS */}
-        <section>
-          <h3 className="text-cyan-500 uppercase font-semibold mb-6">Projects</h3>
-          <div className="space-y-12">
-            {/* Aim Trainer */}
-            <div>
-              <div className="flex justify-between items-baseline">
-                <span className="font-medium">Aim Trainer</span>
-                <span className="text-gray-500">live  github</span>
-              </div>
-              <div className="text-gray-500 text-sm">
-                Python, Py5, py5_tools
-              </div>
-            </div>
-            <br></br>
-
-            {/* Yui AI Assistant */}
-            <div>
-              <div className="flex justify-between items-baseline">
-                <span className="font-medium">Yui AI Assistant</span>
-                <span className="text-gray-500">Planned</span>
-              </div>
-              <div className="text-gray-500 text-sm">
-                Python, Voice AI, Flask
-              </div>
-            </div>
-            <br></br>
-
-            {/* Personal Website */}
-            <div>
-              <div className="flex justify-between items-baseline">
-                <span className="font-medium">Personal Website</span>
-                <span className="text-gray-500">In Progress</span>
-              </div>
-              <div className="text-gray-600 text-sm">
-                Next.js, HTML, CSS, Git
-              </div>
-            </div>
-          </div>
+        {/* About content */}
+        <section className="pb-32">
+          <div className="text-pink-400 font-semibold mb-2">hi, hola</div>
           <br></br>
-        </section>
+          <div className="text-gray-500 mb-8">[ him ]</div>
 
-
-        {/* WORK */}
-        <section>
-          <h3 className="text-cyan-500 uppercase font-semibold mb-6">Work</h3>
-          <div className="space-y-16">
-            <div>
-              <div className="flex justify-between items-baseline">
-                <span className="font-medium">
-                  IT Desktop Support Assistant
-                </span>
-                <span className="text-gray-500">Sep 2023 – Present</span>
-              </div>
-              <div className="text-gray-600 text-sm">@ St Olaf College</div>
-            </div>
+          <p className="text-gray-700 leading-relaxed">
+            i’m a currently a computer science major with a concentration in Statistics and Data Science at St Olaf College.</p>
             <br></br>
 
-            <div>
-              <div className="flex justify-between items-baseline">
-                <span className="font-medium">
-                  Printroom Operator
-                </span>
-                <span className="text-gray-500">May 2021 – Present</span>
-              </div>
-              <div className="text-gray-600 text-sm">@ Showdown Displays</div>
-            </div>
+          <p className="text-gray-700 leading-relaxed mt-6">
+            when i'm not programming you can catch me lounging around, trying new restaurants, and
+          </p>
+        <p className="text-gray-700 leading-relaxed mt-6">
+            trying to build new things.
+            </p>
+        <br></br>
+
+          <p className="text-gray-700 leading-relaxed mt-6">
+           i still have much more to learn, and i'm always open to exploring new opportunities, —{' '}
+            <a href="mailto:rincon2@stolaf.edu" className="underline hover:underline">
+              connect with me here
+            </a>
+            .
+          </p>
+
+          {/* Icon links row */}
+          <div className="pt-10 flex flex-row [column-gap:1.0rem]">
+            <a
+              href="https://github.com/Luis-codess"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="inline-flex"
+            >
+              <Image src="/github.svg" alt="GitHub" width={30} height={30} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/luisrinconcodes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex"
+            >
+              <Image src="/linkedin.svg" alt="LinkedIn" width={30} height={30} />
+            </a>
           </div>
         </section>
       </div>
